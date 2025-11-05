@@ -1,0 +1,77 @@
+
+:root{
+  --bg:#eef6fa;
+  --card:#ffffff;
+  --accent:#ff7a00;
+  --muted:#8a97a6;
+  --text:#0f1724;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+.app{display:flex;min-height:100vh}
+.sidebar{width:220px;background:white;padding:22px 16px;border-right:1px solid rgba(0,0,0,0.04);display:flex;flex-direction:column;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff9a3c);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.brand-text{font-weight:600}
+.nav{display:flex;flex-direction:column;gap:6px}
+.nav-item{padding:10px;border-radius:8px;color:var(--muted);text-decoration:none;cursor:pointer}
+.nav-item.active{background:linear-gradient(90deg,#fff6f0,#fffaf5);color:var(--accent);font-weight:600}
+.nav-item.small{font-size:13px;color:var(--muted)}
+.sidebar-bottom{margin-top:20px}
+
+.main{flex:1;padding:28px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.top-left h2{margin:0;font-size:20px}
+.welcome{margin:0;color:var(--muted)}
+.top-right{display:flex;align-items:center;gap:12px}
+.search{padding:10px 14px;border-radius:24px;border:1px solid rgba(15,23,36,0.06);min-width:220px}
+.icons{font-size:18px}
+
+.cards-row{display:flex;gap:14px;margin-bottom:18px}
+.card{background:var(--card);border-radius:var(--radius);padding:16px;box-shadow:0 1px 2px rgba(16,24,40,0.04);flex:1}
+.card.small{flex-basis:0;flex:1;min-width:0}
+.card-title{font-size:13px;color:var(--muted);margin-bottom:8px}
+.card-value{font-size:20px;font-weight:700}
+.muted{color:var(--muted);font-weight:500;margin-left:6px}
+.donut-mini{width:48px;height:48px;border-radius:50%;background:conic-gradient(var(--accent) 0 30%, #e9f0f6 30%)}
+
+.content{display:flex;gap:18px}
+.left-col{flex:1;display:flex;flex-direction:column;gap:18px}
+.right-col{width:320px}
+.chart-card{padding:20px}
+.chart-placeholder{height:260px;display:flex;flex-direction:column;justify-content:space-between}
+.bars{display:flex;align-items:end;gap:10px;height:200px}
+.bar{width:28px;background:linear-gradient(180deg,#2b8df6,#6ec1ff);border-radius:6px}
+.chart-legend{text-align:center;color:var(--muted);font-size:13px}
+
+.stats-card{padding:18px;display:flex;align-items:center}
+.card-body{display:flex;justify-content:space-between;gap:12px}
+.stats-left{flex:1}
+.stats-left h3{margin-top:0}
+.percent-list{list-style:none;padding:0;margin:8px 0 0 0}
+.percent-list li{margin-bottom:8px;color:var(--muted)}
+.stats-right{width:220px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.donut-large{width:110px;height:110px;border-radius:50%;background:conic-gradient(#ff9a3c 0 30%, #ffc88a 30% 55%, #f0b36a 55% 85%, #eee 85%);box-shadow:inset 0 -6px 12px rgba(0,0,0,0.03)}
+.totals{font-size:13px;color:var(--muted);text-align:left}
+
+.chat-card{padding:12px}
+.chat-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.chat-list li{display:flex;align-items:center;gap:12px;padding:8px;border-radius:8px}
+.avatar-sm{width:44px;height:44px;border-radius:8px;background:#f0f4f7;display:flex;align-items:center;justify-content:center;font-weight:700;color:#334155}
+.chat-info{flex:1}
+.chat-info small{display:block;color:var(--muted);font-size:12px}
+.badge{background:var(--accent);color:white;padding:6px 8px;border-radius:999px;font-size:12px}
+
+@media(max-width:900px){
+  .app{flex-direction:column}
+  .sidebar{width:100%;flex-direction:row;align-items:center}
+  .right-col{width:100%}
+  .content{flex-direction:column}
+  .cards-row{flex-wrap:wrap}
+}

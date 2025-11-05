@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard - MyRestaurant</title>
+        <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">MR</div>
+                <div class="brand-text">MyRestaurant</div>
+            </div>
+            <nav class="nav">
+                <a class="nav-item active">🏠 Home</a>
+                <a class="nav-item">💳 Carteira</a>
+                <a class="nav-item">📦 Estoque</a>
+                <a class="nav-item">📊 Análise Gerencial</a>
+                <a class="nav-item">👥 Funcionários</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a class="nav-item small">⚙️ Configurações</a>
+            </div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <div class="top-left">
+                    <h2>Home</h2>
+                    <p class="welcome">Olá <strong>Usuário</strong>, seja bem vindo</p>
+                </div>
+                <div class="top-right">
+                    <input class="search" placeholder="Pesquisar">
+                    <div class="icons">🔔 ⚙️ <span class="avatar">👤</span></div>
+                </div>
+            </header>
+
+            <section class="cards-row">
+                <div class="card small">
+                    <div class="card-title">Produtos</div>
+                    <div class="card-value">0 <span class="muted">/0</span></div>
+                </div>
+                <div class="card small">
+                    <div class="card-title">Compras</div>
+                    <div class="card-value">0</div>
+                </div>
+                <div class="card small">
+                    <div class="card-title">Gastos totais</div>
+                    <div class="card-value">R$ 0,00</div>
+                </div>
+                <div class="card small">
+                    <div class="card-title">Promoção</div>
+                    <div class="donut-mini"></div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div class="left-col">
+                    <div class="card chart-card">
+                        <div class="card-title">Relação de produto e desperdício</div>
+                        <div class="chart-placeholder">
+                            <!-- simple bar-like placeholders -->
+                            <div class="bars">
+                                <div class="bar" style="height:160px"></div>
+                                <div class="bar" style="height:240px"></div>
+                                <div class="bar" style="height:200px"></div>
+                                <div class="bar" style="height:80px"></div>
+                                <div class="bar" style="height:70px"></div>
+                                <div class="bar" style="height:110px"></div>
+                                <div class="bar" style="height:120px"></div>
+                            </div>
+                            <div class="chart-legend">Utilizado · Promoção · Desperdício</div>
+                        </div>
+                    </div>
+
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="stats-left">
+                                <h3>Divisão de gastos</h3>
+                                <ul class="percent-list">
+                                    <li><strong>30%</strong> é investido em <span>funcionários</span></li>
+                                    <li><strong>25%</strong> é investido em <span>produtos</span></li>
+                                    <li><strong>20%</strong> é investido no <span>estabelecimento</span></li>
+                                </ul>
+                            </div>
+                            <div class="stats-right">
+                                <div class="donut-large"></div>
+                                <div class="totals">
+                                    <div>Funcionários <strong>R$ 11.242,35</strong></div>
+                                    <div>Produtos <strong>R$ 9.368,49</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="right-col">
+                    <div class="card chat-card">
+                        <div class="card-title">Chat Funcionários</div>
+                        <ul class="chat-list">
+                            <li><span class="avatar-sm">FC</span><div class="chat-info"><strong>Fabio Lutz</strong><small>13:00 - 21:00</small></div><span class="badge">12</span></li>
+                            <li><span class="avatar-sm">FR</span><div class="chat-info"><strong>Felipe Rodrigo</strong><small>13:00 - 21:00</small></div></li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
